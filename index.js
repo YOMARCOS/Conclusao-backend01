@@ -7,15 +7,7 @@ app.use(express.json());  // definindo tipo de texto
 //usuario.senha
 //usuario.email
 //usuario.identificador
-const users = [
-
-  {
-    nome: "compras",
-    senha:"comprar carne",
-    email: "fafa@emai.com",
-    id: 1
-  }
-];
+const users = [];
 let idUser = 0;
 
 //lista de recados com as seguintes propriedades
