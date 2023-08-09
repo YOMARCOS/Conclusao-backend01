@@ -1,7 +1,10 @@
-import express from "express"; //importano express
+import cors from 'cors'
+import express from "express"; //importando express
 
 const app = express();   //ativando
 app.use(express.json());  // definindo tipo de texto
+app.use(cors()); // import cors
+
 //lista de usuarios com as seguintes propriedades
 //usario.nome
 //usuario.senha
@@ -14,7 +17,23 @@ let idUser = 0;
 //recado.titulo
 //recado.descricao
 //recado.identificador
-const recados = [];
+const recados = [
+  {
+    titulo: "testando paginação",
+    descricao: "teste de api",
+    id: 1
+  },
+  {
+    titulo: "testando paginação",
+    descricao: "teste de api",
+    id: 2
+  },
+  {
+    titulo: "testando paginação",
+    descricao: "teste de api",
+    id: 3
+  }
+];
 let idRecado = 0;
 
 // deve receber um json no body com as seguintes propriedades
@@ -79,6 +98,11 @@ app.post("/users/listagem", function (req, res) {
   res.json(users)
 })
 // crud de recados
+
+//rota listagem de recados
+app.get("/recados/listagem", function (req, res) {
+  res.json(recados)
+})
 
 app.post("/recados", function (req, res) { // criando recado
   let userExistente = false;

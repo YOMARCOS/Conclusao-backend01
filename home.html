@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <h1 style="font-family: fantasy; color: forestgreen;">Olá, este é meu CRUD de recados</h1>
+        <br>
+        <p>
+             <b>Para teste pode ultilizar o usuário já cadastrado</b>
+             nome: "teste",
+              email: "teste@teste",
+              senha: "senha@teste",
+              id: 0
+
+            <b>Para cadastro deve receber um json no body com as seguintes propriedades</b>
+            nome
+            senha
+            email
+            rota: "/cadastro-users"
+            metodo POST
+
+            <b>Para Login deve receber um json no body com as seguintes propriedades</b>
+
+            rota: "/users/login"
+            email
+            senha
+            metodo POST
+
+            <b>Para listar usuários deve seguir a rota</b>
+
+            rota: "/users/listagem"
+            metodo POST
+
+            <b>Para cadastro de recados deve receber um json no body com as seguintes propriedades</b>
+
+            rota: "/recados"
+            titulo
+            descricao
+            email
+            metodo POST
+
+            <b>Para buscar de recado deve receber  query params com as seguintes propriedades</b>
+            
+            "/recados/:email/:id"
+            email
+            id
+            metodo GET
+
+          <b>Para atualizar de recado deve receber query params com as seguintes propriedades</b>
+
+            app.put("/recados/:email/:id", function (req, res) {
+            const enInvalid = !req.body.titulo || !req.body.descricao;
+            // atualizar um recado
+            const id = parseInt(req.params.id);
+            const recadoEncontrado = recados.find(function (recado) {
+            return recado.id === id;
+            });
+            if (enInvalid) {
+            res.status(400);
+            res.send("Dados inválidos");
+            } else if (!recadoEncontrado) {
+            res.status(404);
+            res.send("Recado não encontrado");
+            } else {
+            recadoEncontrado.titulo = req.body.titulo;
+            recadoEncontrado.descricao = req.body.descricao;
+            res.json({
+            mensagem: "Recado atualizado com sucesso",
+            recado: recadoEncontrado,
+            });
+            }
+            });
+
+            app.delete("/recados/:email/:id", function (req, res) {
+            const id = parseInt(req.params.id);
+            const indice = recados.findIndex(function (recado) {
+            return recado.id === id;
+            });
+            if (indice === -1) {
+            res.status(404);
+            res.send("Recado não encontrado");
+            } else {
+            recados.splice(indice, 1);
+            res.json({
+            mensagem: "Recado removido com sucesso",
+            });
+            }
+            });
+
+            app.listen(3000, function () {
+            console.log("servidor rodando na porta 3000: url http://localhost:3000");
+            });
+        </p>
+
+    </div>
+</body>
+
+</html>
