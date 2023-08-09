@@ -1,6 +1,6 @@
 // controllers/usersController.js
 
-import { users } from '../models/usersModel'; // Importe o array 'users' do seu modelo
+import { users } from ''; // Importe o array 'users' do seu modelo
 
 const usersController = {
   cadastrarUsuario(req, res) {
