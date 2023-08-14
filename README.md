@@ -16,10 +16,10 @@ O CRUD DE RECADOS é um projeto que oferece um backend eficiente e intuitivo par
 
 ## :computer: Tecnologias Utilizadas
 
-- :white_check_mark: [Express](https://expressjs.com/) - Um framework web para Node.js que simplifica a criação de APIs.
-- :arrows_counterclockwise: [Cors](https://expressjs.com/en/resources/middleware/cors.html) - Um middleware para permitir requisições de diferentes origens.
-- :heavy_check_mark: JavaScript - Linguagem de programação amplamente usada para o desenvolvimento web.
-- :heavy_check_mark: Node.js - Ambiente de tempo de execução JavaScript que permite a construção de aplicações do lado do servidor.
+:white_check_mark: Express - Um framework web para Node.js que simplifica a criação de APIs.
+:arrows_counterclockwise: Cors - Um middleware para permitir requisições de diferentes origens.
+:gear: Node.js - Um ambiente de execução JavaScript baseado em V8 para construir aplicações do lado do servidor.
+:memo: JavaScript - A linguagem de programação usada para desenvolver a lógica do aplicativo.
 
 ## :memo: Funcionalidades Destacadas
 
