@@ -2,29 +2,11 @@
 
 import  recados from '../components/recados.js';
 import users from '../components/users.js';
+import usersController from './usersController.js';
  let proximoIdRecado = 1;
+
 export const recadosController = {
-  listarRecados(req, res) {
-    // Obtém o número da página a partir dos parâmetros da consulta ou assume 1 como padrão
-    const paginaAtual = parseInt(req.query.page) || 1;
-    
-    // Obtém o número de elementos por página a partir dos parâmetros da consulta ou assume 3 como padrão
-    const recadosPorPagina = parseInt(req.query.per_page) || 3;
   
-    // Calcula o índice de início dos recados com base na página atual e na quantidade por página
-    const indiceInicio = (paginaAtual - 1) * recadosPorPagina;
-  
-    // Slice do array de recados para obter os recados da página atual
-    const recadosDaPagina = recados.slice(indiceInicio, indiceInicio + recadosPorPagina);
-  
-    // Retorna uma resposta JSON com os recados da página atual e informações de paginação
-    res.json({
-      recados: recadosDaPagina,
-      paginaAtual,
-      recadosPorPagina,
-      totalRecados: recados.length
-    });
-  },
 
   criarRecado(req, res) {
     // Implemente a lógica para criar um novo recado

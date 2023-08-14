@@ -5,8 +5,7 @@ import { recadosController } from '../controllers/recadosController.js';
 
 const router = express.Router();
 
-// Rota para listar todos os recados
-router.get('/', recadosController.listarRecados);
+
 
 // Rota para criar um novo recado
 router.post('/create', recadosController.criarRecado);
