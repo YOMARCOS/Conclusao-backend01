@@ -10,6 +10,14 @@
 
 <hr>
 
+## Uso
+
+Consuma a API remotamente pelo link:
+https://api-crudde-recados.onrender.com
+
+Consuma a API em um servidor local após a instalação pelo link:
+http://localhost:1300/
+
 ## ℹ️ Sobre o Projeto
 
 O CRUD DE RECADOS é um projeto que oferece um backend eficiente e intuitivo para cadastro e gerenciamento de usuários, além de fornecer recursos completos para criação e manipulação de recados. Desenvolvido com as tecnologias Express.js, JavaScript e Node.js, o aplicativo é altamente modularizado para facilitar a manutenção e escalabilidade.
