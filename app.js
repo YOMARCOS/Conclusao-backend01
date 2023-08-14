@@ -2,18 +2,25 @@
 
 import cors from 'cors';
 import express from 'express';
-import usersRoutes from './routes/usersRoutes';
-import recadosRoutes from './routes/recadosRoutes';
+import usersRoutes from './src/routes/usersRoutes.js'; 
+import recadosRoutes from './src/routes/recadosRoutes.js';
+
+
 
 const app = express();
 app.use(express.json());
 app.use(cors());
 
-// Rotas
 app.use('/users', usersRoutes);
+
 app.use('/recados', recadosRoutes);
 
-const PORT = process.env.PORT || 13;
-app.listen(PORT, () => {
-  console.log(`Servidor rodando na porta ${PORT}`);
+const PORT = process.env.PORT || 1300;
+app.listen(PORT, (error) => {
+  if (error) {
+    console.error('Error starting the server:', error);
+  } else {
+    console.log(`Server running on port ${PORT}`);
+  }
 });
+

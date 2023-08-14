@@ -1,20 +1,23 @@
-
 <h1 align="center">CRUD DE RECADOS</h1>
 
 <p align="center">
   Um backend simples para gerenciar usuários e recados, construído com Express.js.
 </p>
+
+<div align="center">
+  <img alt="License" src="https://img.shields.io/badge/license-MIT-blue">
+</div>
+
 <hr>
 
-
-## :sparkles: Sobre o Projeto
+## ℹ️ Sobre o Projeto
 
 O CRUD DE RECADOS é um projeto que oferece um backend simples para cadastro de usuários e gerenciamento de recados. Foi construído usando o framework Express.js para agilizar o desenvolvimento.
 
 ## :computer: Tecnologias Utilizadas
 
-- :white_check_mark: [Express](https://expressjs.com/)
-- :arrows_counterclockwise: [Cors](https://expressjs.com/en/resources/middleware/cors.html)
+- :white_check_mark: [Express](https://expressjs.com/) - Um framework web para Node.js que simplifica a criação de APIs.
+- :arrows_counterclockwise: [Cors](https://expressjs.com/en/resources/middleware/cors.html) - Um middleware para permitir requisições de diferentes origens.
 
 ## :memo: Funcionalidades
 
@@ -37,8 +40,5 @@ O CRUD DE RECADOS é um projeto que oferece um backend simples para cadastro de 
 
 ## :busts_in_silhouette: Contribuição
 
-Contribuições são bem-vindas!
-
-
-
+Contribuições são bem-vindas! Sinta-se à vontade para abrir pull requests ou relatar problemas.
 
