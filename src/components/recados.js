@@ -1,107 +1,219 @@
-
 const recados = [
+  // Recados para Maria (Brasil)
   {
-    titulo: "testando paginação",
-    descricao: "teste de api",
+    titulo: "Carnaval Brasileiro",
+    descricao: "Descubra a energia contagiante e as cores vibrantes do Carnaval brasileiro.",
     idRecado: 1,
     idUser: 1
   },
   {
-    titulo: "Vitória emocionante no último minuto",
-    descricao: "Nosso time de futebol ganhou com um gol nos acréscimos!",
+    titulo: "Feijoada Tradicional",
+    descricao: "Experimente a feijoada, um prato icônico da culinária brasileira, composto por feijão-preto e carne.",
     idRecado: 2,
     idUser: 1
   },
   {
-    titulo: "Nova produção cinematográfica",
-    descricao: "Um filme épico está sendo produzido e promete surpreender a todos.",
+    titulo: "Samba e Ritmos Brasileiros",
+    descricao: "Conheça os ritmos musicais envolventes do Brasil, como samba, bossa nova e forró.",
     idRecado: 3,
     idUser: 1
   },
   {
-    titulo: "Tendências econômicas atuais",
-    descricao: "A economia está se recuperando após um período desafiador.",
+    titulo: "Futebol e Paixão",
+    descricao: "Explore a paixão do Brasil pelo futebol, um esporte que une pessoas de todas as idades.",
     idRecado: 4,
-    idUser: 4
+    idUser: 1
   },
   {
-    titulo: "Clássico local no final de semana",
-    descricao: "O grande clássico de futebol da cidade acontecerá no sábado.",
+    titulo: "Belezas Naturais",
+    descricao: "Descubra as incríveis paisagens do Brasil, incluindo praias deslumbrantes e florestas tropicais.",
+    idRecado: 5,
+    idUser: 1
+  },
+  {
+    titulo: "Arte e Cultura",
+    descricao: "Explore a rica cena artística do Brasil, incluindo a arquitetura colonial e a arte indígena.",
+    idRecado: 6,
+    idUser: 1
+  },
+  {
+    titulo: "Gastronomia Variada",
+    descricao: "Aprecie a diversidade da culinária brasileira, com pratos regionais como acarajé, tapioca e moqueca.",
+    idRecado: 7,
+    idUser: 1
+  },
+  // Recados para Satoshi (Japão)
+  {
+    titulo: "Cerimônia do Chá",
+    descricao: "Explore a cerimônia do chá japonesa, um ritual que envolve preparar e servir chá verde matcha.",
+    idRecado: 1,
+    idUser: 2
+  },
+  {
+    titulo: "Origami",
+    descricao: "Aprenda a dobrar papel de forma criativa, uma tradição japonesa que cria figuras diversas.",
+    idRecado: 2,
+    idUser: 2
+  },
+  {
+    titulo: "Ikebana: A Arte dos Arranjos Florais",
+    descricao: "Descubra a arte japonesa de arranjar flores de maneira equilibrada e esteticamente agradável.",
+    idRecado: 3,
+    idUser: 2
+  },
+  {
+    titulo: "Artes Marciais e Disciplina",
+    descricao: "Explore as artes marciais japonesas, como o judô e o karatê, que enfatizam a disciplina e a autodefesa.",
+    idRecado: 4,
+    idUser: 2
+  },
+  {
+    titulo: "Tradições Festivas",
+    descricao: "Conheça festivais tradicionais do Japão, como o Hanami (apreciação das flores de cerejeira) e Tanabata (Festival das Estrelas).",
+    idRecado: 5,
+    idUser: 2
+  },
+  {
+    titulo: "Tecnologia e Inovação",
+    descricao: "Explore a influência do Japão na tecnologia e inovação global, desde eletrônicos até robótica.",
+    idRecado: 6,
+    idUser: 2
+  },
+  {
+    titulo: "Gastronomia Distinta",
+    descricao: "Aprecie pratos japoneses renomados, como sushi, tempurá e ramen, que são uma celebração da harmonia entre sabor e apresentação.",
+    idRecado: 7,
+    idUser: 2
+  },
+  // Recados para Luis (México)
+  {
+    titulo: "Festivais Coloridos",
+    descricao: "Descubra a alegria dos festivais mexicanos, como o Dia de los Muertos e o Carnaval.",
+    idRecado: 1,
+    idUser: 3
+  },
+  {
+    titulo: "Gastronomia Apimentada",
+    descricao: "Aprecie a rica culinária mexicana, famosa por pratos como tacos, guacamole e mole.",
+    idRecado: 2,
+    idUser: 3
+  },
+  {
+    titulo: "Artesanato e Cores Vivas",
+    descricao: "Explore o artesanato tradicional mexicano, como cerâmica, tecelagem e alebrijes.",
+    idRecado: 3,
+    idUser: 3
+  },
+  {
+    titulo: "Música Mariachi",
+    descricao: "Conheça a música mariachi, uma tradição musical que representa a cultura mexicana.",
+    idRecado: 4,
+    idUser: 3
+  },
+  {
+    titulo: "Dança Folclórica",
+    descricao: "Aprenda sobre a dança folclórica mexicana, como a dança dos vassouras e a jarabe tapatío.",
     idRecado: 5,
     idUser: 3
   },
   {
-    titulo: "Próximo blockbuster em breve",
-    descricao: "Um filme aguardado está prestes a ser lançado nas telonas.",
+    titulo: "Sítios Arqueológicos",
+    descricao: "Explore sítios arqueológicos impressionantes no México, como as pirâmides de Teotihuacán e Chichén Itzá.",
     idRecado: 6,
-    idUser: 9
+    idUser: 3
   },
   {
-    titulo: "Flutuações no mercado de ações",
-    descricao: "As ações de tecnologia estão apresentando movimentos interessantes.",
+    titulo: "Costumes Coloridos",
+    descricao: "No México, as pessoas frequentemente se cumprimentam com beijos no rosto e são conhecidas por suas roupas coloridas e alegres.",
     idRecado: 7,
-    idUser: 7
+    idUser: 3
+  },
+  // Recados para Elena (Rússia)
+  {
+    titulo: "Arquitetura Icônica",
+    descricao: "Explore a rica arquitetura russa, incluindo a Catedral de São Basílio e o Palácio de Inverno.",
+    idRecado: 1,
+    idUser: 4
   },
   {
-    titulo: "Novidades no elenco do time",
-    descricao: "Novos jogadores se juntam à equipe em busca de vitórias.",
-    idRecado: 8,
-    idUser: 2
+    titulo: "Dança Tradicional",
+    descricao: "Aprenda sobre a elegante dança russa, como o balé clássico e a dança folclórica.",
+    idRecado: 2,
+    idUser: 4
   },
   {
-    titulo: "Festival de cinema internacional",
-    descricao: "O festival de cinema trará obras inovadoras de todo o mundo.",
-    idRecado: 9,
-    idUser: 9
+    titulo: "Contos de Fadas Russos",
+    descricao: "Descubra contos de fadas e lendas russas, que muitas vezes têm elementos mágicos e místicos.",
+    idRecado: 3,
+    idUser: 4
   },
   {
-    titulo: "Desafios na indústria automobilística",
-    descricao: "A indústria automobilística enfrenta mudanças significativas.",
-    idRecado: 10,
-    idUser: 10
+    titulo: "Vodca e Brindes",
+    descricao: "Conheça a importância da vodca na cultura russa, frequentemente acompanhada por brindes calorosos.",
+    idRecado: 4,
+    idUser: 4
   },
   {
-    titulo: "Empate emocionante no campeonato",
-    descricao: "O jogo de ontem terminou em empate após uma disputa acirrada.",
-    idRecado: 11,
-    idUser: 11
+    titulo: "Invernos Rigorosos",
+    descricao: "Saiba como os invernos frios da Rússia moldaram a vida cotidiana e as tradições do país.",
+    idRecado: 5,
+    idUser: 4
   },
   {
-    titulo: "Cinema em tempos de streaming",
-    descricao: "O impacto das plataformas de streaming na indústria cinematográfica.",
-    idRecado: 12,
-    idUser: 12
+    titulo: "Gastronomia Russa",
+    descricao: "Explore pratos russos como borsch, pelmeni e blini, que são apreciados em toda a nação.",
+    idRecado: 6,
+    idUser: 4
   },
   {
-    titulo: "Investimentos em energias renováveis",
-    descricao: "Empresas estão direcionando recursos para projetos sustentáveis.",
-    idRecado: 13,
-    idUser: 13
+    titulo: "Tradições Religiosas",
+    descricao: "Na Rússia, a Páscoa é uma celebração importante, marcada por práticas religiosas e ovos pintados à mão.",
+    idRecado: 7,
+    idUser: 4
+  },
+  // Recados para Léa (França)
+  {
+    titulo: "Gastronomia Francesa",
+    descricao: "Explore a renomada culinária francesa, incluindo queijos, croissants e pratos refinados.",
+    idRecado: 1,
+    idUser: 5
   },
   {
-    titulo: "Expectativas para a partida de domingo",
-    descricao: "Os torcedores estão ansiosos pelo jogo crucial no final de semana.",
-    idRecado: 14,
-    idUser: 14
+    titulo: "Arte e Moda",
+    descricao: "Descubra o papel influente da França na arte, moda e design global.",
+    idRecado: 2,
+    idUser: 5
   },
   {
-    titulo: "Premiação internacional para filme nacional",
-    descricao: "Uma produção do país ganhou destaque em um festival renomado.",
-    idRecado: 15,
-    idUser: 15
+    titulo: "Paisagens Encantadoras",
+    descricao: "Aprecie as belas paisagens da França, incluindo campos de lavanda e castelos majestosos.",
+    idRecado: 3,
+    idUser: 5
   },
   {
-    titulo: "Variações nas taxas de juros",
-    descricao: "As taxas de juros estão sofrendo alterações devido às políticas econômicas.",
-    idRecado: 16,
-    idUser: 16
+    titulo: "Vida em Cafés",
+    descricao: "Explore a tradição de passar o tempo em cafés charmosos, uma parte essencial da cultura francesa.",
+    idRecado: 4,
+    idUser: 5
   },
   {
-    titulo: "Lesão de jogador influente",
-    descricao: "Uma lesão afetará a participação de um jogador importante na próxima partida.",
-    idRecado: 17,
-    idUser: 17
+    titulo: "Literatura e Filosofia",
+    descricao: "Aprenda sobre os grandes escritores e filósofos franceses que moldaram o pensamento moderno.",
+    idRecado: 5,
+    idUser: 5
+  },
+  {
+    titulo: "Vinho e Cultura Vinícola",
+    descricao: "Conheça as regiões vinícolas da França e a apreciação do vinho como parte da cultura.",
+    idRecado: 6,
+    idUser: 5
+  },
+  {
+    titulo: "Eventos Culturais",
+    descricao: "Na França, eventos culturais como o Festival de Cannes e a Fête de la Musique são celebrações populares.",
+    idRecado: 7,
+    idUser: 5
   }
-];//lista de recados
+];
 
 export default recados;

@@ -28,36 +28,6 @@ const users = [
     senha: "senha5",
     email: "usuario5@example.com",
     identificador: 5
-  },
-  {
-    nome: "Usuário 6",
-    senha: "senha6",
-    email: "usuario6@example.com",
-    identificador: 6
-  },
-  {
-    nome: "Usuário 7",
-    senha: "senha7",
-    email: "usuario7@example.com",
-    identificador: 7
-  },
-  {
-    nome: "Usuário 8",
-    senha: "senha8",
-    email: "usuario8@example.com",
-    identificador: 8
-  },
-  {
-    nome: "Usuário 9",
-    senha: "senha9",
-    email: "usuario9@example.com",
-    identificador: 9
-  },
-  {
-    nome: "Usuário 10",
-    senha: "senha10",
-    email: "usuario10@example.com",
-    identificador: 10
   }
 ]; //lista de usuarios
 
