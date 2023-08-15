@@ -2,7 +2,7 @@
 import users from '../components/users.js';
 import recados from '../components/recados.js';
 let userLogado = false;
-let idUserLogado = 0;
+
 // Define o objeto 'usersController', que contém funções para manipular as funcionalidades relacionadas aos usuários.
 export const usersController = {
   
@@ -51,50 +51,31 @@ export const usersController = {
   loginUsuario(req, res) {
     // Verifica se as credenciais de login são válidas, procurando um usuário na lista com o mesmo email e senha.
     let userValid = users.find(user => user.email === req.body.email && user.senha === req.body.senha);
- 
+   var idUserLogado = userValid.identificador
     if (userValid) {
-      for (const user  of users) {
-    idUserLogado = user.identificador
-      }
       userLogado= true
+      const recadosDoUsuario = recados.filter(recado => recado.idUser === idUserLogado );
+       // Obtém o número da página a partir dos parâmetros da consulta ou assume 1 como padrão
+       const paginaAtual = parseInt(req.query.page) || 1;
+  
+       // Obtém o número de elementos por página a partir dos parâmetros da consulta ou assume 3 como padrão
+       const recadosPorPagina = parseInt(req.query.per_page) || 3;
+   
+       // Calcula o índice de início dos recados com base na página atual e na quantidade por página
+       const indiceInicio = (paginaAtual - 1) * recadosPorPagina;
+   
+       // Slice do array de recados do usuário para obter os recados da página atual
+       const recadosDaPagina = recadosDoUsuario.slice(indiceInicio, indiceInicio + recadosPorPagina);
       
-      res.status(200).json({ "mensagem": "Login efetuado com sucesso", idUserLogado });
+      res.status(200).json({ "mensagem": "Login efetuado com sucesso", idUserLogado,
+      recadosDaPagina,
+      paginaAtual,
+      recadosPorPagina,
+      totalRecados: recadosDoUsuario.length });
     } else {
       return res.status(400).send("Dados inválidos");
     }
   },
-
-  listarRecados(req, res) {
-    if (userLogado) {
-      // Filtrar recados pelo idUserLogado
-      const recadosDoUsuario = recados.filter(recado => recado.idUser === idUserLogado);
-  
-      // Obtém o número da página a partir dos parâmetros da consulta ou assume 1 como padrão
-      const paginaAtual = parseInt(req.query.page) || 1;
-  
-      // Obtém o número de elementos por página a partir dos parâmetros da consulta ou assume 3 como padrão
-      const recadosPorPagina = parseInt(req.query.per_page) || 3;
-  
-      // Calcula o índice de início dos recados com base na página atual e na quantidade por página
-      const indiceInicio = (paginaAtual - 1) * recadosPorPagina;
-  
-      // Slice do array de recados do usuário para obter os recados da página atual
-      const recadosDaPagina = recadosDoUsuario.slice(indiceInicio, indiceInicio + recadosPorPagina);
-  
-      // Retorna uma resposta JSON com os recados do usuário da página atual e informações de paginação
-      return res.status(200).json({
-        recados: recadosDaPagina,
-        paginaAtual,
-        recadosPorPagina,
-        totalRecados: recadosDoUsuario.length
-      });
-    } else {
-      return res.status(401).json("Acesso negado");
-    }
-  }
-  ,
-
-
 
 
   /**

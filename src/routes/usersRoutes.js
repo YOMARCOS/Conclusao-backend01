@@ -8,8 +8,10 @@ router.post('/cadastrar', usersController.cadastrarUsuario);
 
 // Rota para efetuar o login do usuário
 router.post('/login', usersController.loginUsuario);
-// Rota para listar todos os recados
-router.get('/login', usersController.listarRecados);
+
+// Rota para listar recados do user
+
+
 // Rota para listar todos os usuários
 router.get('/listar', usersController.listarUsuarios);
 
