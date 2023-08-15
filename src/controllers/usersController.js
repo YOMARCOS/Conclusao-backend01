@@ -63,6 +63,7 @@ export const usersController = {
    
        // Calcula o índice de início dos recados com base na página atual e na quantidade por página
        const indiceInicio = (paginaAtual - 1) * recadosPorPagina;
+       const totalPages = Math.ceil(recadosDoUsuario.length / recadosPorPagina);
    
        // Slice do array de recados do usuário para obter os recados da página atual
        const recadosDaPagina = recadosDoUsuario.slice(indiceInicio, indiceInicio + recadosPorPagina);
@@ -71,6 +72,7 @@ export const usersController = {
       recadosDaPagina,
       paginaAtual,
       recadosPorPagina,
+      totalPages,
       totalRecados: recadosDoUsuario.length });
     } else {
       return res.status(400).send("Dados inválidos");
