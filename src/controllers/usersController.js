@@ -2,6 +2,7 @@
 import users from '../components/users.js';
 import recados from '../components/recados.js';
 let userLogado = false;
+const idUser = 1;
 
 // Define o objeto 'usersController', que contém funções para manipular as funcionalidades relacionadas aos usuários.
 export const usersController = {
